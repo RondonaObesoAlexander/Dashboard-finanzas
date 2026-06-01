@@ -1,104 +1,108 @@
-# 💰 Finance Dashboard
+# 💰 Dashboard de Finanzas
 
-A full-stack personal finance tracking application built with **Node.js**, **SQLite**, and **vanilla JavaScript**. Features real-time charts, budget tracking, and transaction management with a clean REST API.
+Aplicación full-stack para seguimiento de finanzas personales construida con **Node.js**, **SQLite** y **JavaScript vanilla**. Incluye gráficos en tiempo real, seguimiento de presupuestos y gestión de transacciones con una API REST limpia.
 
-## ✨ Features
+## ✨ Características
 
-- 📊 Interactive charts (spending by category, monthly trends, net worth evolution)
-- 💳 Transaction CRUD with filtering, sorting, and pagination
-- 🎯 Budget goal tracking with progress indicators
-- 📈 Net worth timeline and savings rate calculator
-- 🔐 JWT authentication with refresh tokens
-- 🧪 Unit + integration tests with 80%+ coverage
-- 📝 Auto-generated API docs with Swagger UI
+- 📊 Gráficos interactivos (gastos por categoría, tendencias mensuales, evolución del patrimonio neto)
+- 💳 CRUD de transacciones con filtrado, ordenamiento y paginación
+- 🎯 Seguimiento de objetivos de presupuesto con indicadores de progreso
+- 📈 Línea de tiempo del patrimonio neto y calculadora de tasa de ahorro
+- 🔐 Autenticación JWT con tokens de refresco
+- 🧪 Pruebas unitarias + de integración con cobertura superior al 80%
+- 📝 Documentación de API autogenerada con Swagger UI
 
-## 🛠️ Tech Stack
+## 🛠️ Lista de Tecnologías  
 
-| Layer      | Technology                        |
-|------------|-----------------------------------|
-| Backend    | Node.js, Express, SQLite (better-sqlite3) |
-| Auth       | JWT (access + refresh tokens)     |
-| Frontend   | Vanilla JS, Chart.js, CSS Grid    |
-| Testing    | Jest, Supertest                   |
-| Docs       | Swagger / OpenAPI 3.0             |
+| Capa           | Tecnología                                 |
+|----------------|--------------------------------------------|
+| Backend        | Node.js, Express, SQLite (better-sqlite3)  |
+| Autenticación  | JWT (tokens de acceso + refresco)          |
+| Frontend       | JavaScript vanilla, Chart.js, CSS Grid     |
+| Pruebas        | Jest, Supertest                            |
+| Documentación  | Swagger / OpenAPI 3.0                      |
 
-## 🚀 Quick Start
+## 🚀 Inicio rápido
 
 ```bash
-# Clone the repo
-git clone https://github.com/your-username/finance-dashboard.git
-cd finance-dashboard
+# Clonar el repositorio
+git clone https://github.com/RondonaObesoAlexander/Dashboard-finanzas.git
+cd Dashboard-finanza
 
-# Install dependencies
+# Instalar dependencias
 cd backend && npm install
 cd ../frontend && npm install
 
-# Seed the database with sample data
+# Sembrar la base de datos con datos de ejemplo
 cd ../backend && npm run seed
 
-# Start the backend (port 3000)
+# Iniciar el backend (puerto 3000)
 npm run dev
 
-# In another terminal, serve the frontend
+# En otra terminal, servir el frontend
 cd ../frontend && npm run dev
 ```
 
-Open `http://localhost:5173` in your browser.
+Abre http://localhost:5173 en tu navegador.
 
-## 📁 Project Structure
+## 📁 Estructura del proyecto
 
 ```
 finance-dashboard/
 ├── backend/
 │   ├── src/
-│   │   ├── controllers/     # Request handlers (thin layer)
-│   │   ├── models/          # Business logic + DB queries
-│   │   ├── routes/          # Express routers
-│   │   ├── middleware/       # Auth, error handling, validation
-│   │   └── db/              # Schema, migrations, seed data
-│   └── tests/               # Jest test suites
+│   │   ├── controllers/     # Manejadores de peticiones (capa delgada)
+│   │   ├── models/          # Lógica de negocio + consultas a BD
+│   │   ├── routes/          # Enrutadores de Express
+│   │   ├── middleware/      # Autenticación, manejo de errores, validación
+│   │   └── db/              # Esquema, migraciones, datos de prueba
+│   └── tests/               # Suites de pruebas Jest
 ├── frontend/
 │   └── src/
-│       ├── components/      # Reusable UI components
-│       ├── hooks/           # State management hooks
-│       ├── pages/           # Page-level views
-│       └── utils/           # API client, formatters
+│       ├── components/      # Componentes UI reutilizables
+│       ├── hooks/           # Hooks de gestión de estado
+│       ├── pages/           # Vistas a nivel de página
+│       └── utils/           # Cliente API, formateadores
 └── docs/
-    └── openapi.yaml         # API specification
+    └── openapi.yaml         # Especificación de la API
 ```
 
-## 🔌 API Endpoints
+## 🔌 Endpoints de la API
 
-| Method | Path                       | Description              |
+| Método | 	Ruta                      |   Descripción            |
 |--------|----------------------------|--------------------------|
-| POST   | `/auth/register`           | Create account           |
-| POST   | `/auth/login`              | Get JWT tokens           |
-| GET    | `/transactions`            | List with filters + pagination |
-| POST   | `/transactions`            | Create transaction       |
-| PUT    | `/transactions/:id`        | Update transaction       |
-| DELETE | `/transactions/:id`        | Delete transaction       |
-| GET    | `/analytics/summary`       | Monthly summary          |
-| GET    | `/analytics/by-category`   | Spending by category     |
-| GET    | `/analytics/net-worth`     | Net worth timeline       |
-| GET    | `/budgets`                 | Get all budgets          |
-| PUT    | `/budgets/:category`       | Update budget goal       |
+| POST   | `/auth/register`           | Crear cuenta             |
+| POST   | `/auth/login`              | Obtener tokens JWT       |
+| GET    | `/transactions`            | Listar con filtros +     |
+|        |                            |           paginación     | 
+| POST   | `/transactions`            | Crear transacción        |
+| PUT    | `/transactions/:id`        | Actualizar transacción   |
+| DELETE | `/transactions/:id`        | Eliminar transacción     |
+| GET    | `/analytics/summary`       | Resumen mensual          |
+| GET    | `/analytics/by-category`   | Gastos por categoría     |
+| GET    | `/analytics/net-worth`     | Línea de tiempo del      |
+|        |                            |       patrimonio neto    |
+| GET    | `/budgets`                 | Obtener todos los        |
+|        |                            |       presupuestos       |
+| PUT    | `/budgets/:category`       | Actualizar objetivo de   |
+|        |                            |        presupuesto       |
 
-## 🧪 Running Tests
+## 🧪 Ejecutar pruebas
 
 ```bash
 cd backend
-npm test              # Run all tests
-npm run test:coverage # With coverage report
+npm test              # Ejecutar todas las pruebas
+npm run test:coverage # Con informe de cobertura
 ```
 
-## 📸 Screenshots
+## 📸 Capturas de pantalla
 
-See `/docs/screenshots/` for UI previews.
+Ver la carpeta /docs/screenshots/ para vistas previas de la interfaz.
 
-## 🤝 Contributing
+## 🤝 Contribuciones
 
-Pull requests welcome. Please open an issue first to discuss significant changes.
+Las solicitudes de cambio son bienvenidas. Por favor, abre un issue primero para discutir cambios significativos.
 
-## 📄 License
+## 📄 Licencia
 
 MIT
