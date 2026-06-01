@@ -27,7 +27,7 @@ A full-stack personal finance tracking application built with **Node.js**, **SQL
 ```bash
 # Clone the repo
 git clone https://github.com/RondonaObesoAlexander/Dashboard-finanzas.git
-cd dashboard-finanzas
+cd Dashboard-finanzas
 
 # Install dependencies
 cd backend && npm install
