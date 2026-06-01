@@ -43,28 +43,28 @@ npm run dev
 cd ../frontend && npm run dev
 ```
 
-Open `http://localhost:5173` in your browser.
+abrir `http://localhost:5173` en tu buscador.
 
-## 📁 Project Structure
+## 📁 Estructura del proyecto
 
 ```
 finance-dashboard/
 ├── backend/
 │   ├── src/
-│   │   ├── controllers/     # Request handlers (thin layer)
-│   │   ├── models/          # Business logic + DB queries
-│   │   ├── routes/          # Express routers
-│   │   ├── middleware/       # Auth, error handling, validation
-│   │   └── db/              # Schema, migrations, seed data
-│   └── tests/               # Jest test suites
+│   │   ├── controllers/     # Manejadores de peticiones (capa delgada)
+│   │   ├── models/          # Lógica de negocio + consultas a BD
+│   │   ├── routes/          # Enrutadores de Express
+│   │   ├── middleware/      # Autenticación, manejo de errores, validación
+│   │   └── db/              # Esquema, migraciones, datos de prueba
+│   └── tests/               # Suites de pruebas Jest
 ├── frontend/
 │   └── src/
-│       ├── components/      # Reusable UI components
-│       ├── hooks/           # State management hooks
-│       ├── pages/           # Page-level views
-│       └── utils/           # API client, formatters
+│       ├── components/      # Componentes UI reutilizables
+│       ├── hooks/           # Hooks de gestión de estado
+│       ├── pages/           # Vistas a nivel de página
+│       └── utils/           # Cliente API, formateadores
 └── docs/
-    └── openapi.yaml         # API specification
+    └── openapi.yaml         # Especificación de la API
 ```
 
 ## 🔌 API Endpoints
