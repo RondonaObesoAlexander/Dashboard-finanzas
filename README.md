@@ -1,72 +1,104 @@
-# 💰 Dashboard de Finanzas
+# 💰 Finance Dashboard
 
-## 🚀 Inicio rápido
+A full-stack personal finance tracking application built with **Node.js**, **SQLite**, and **vanilla JavaScript**. Features real-time charts, budget tracking, and transaction management with a clean REST API.
+
+## ✨ Features
+
+- 📊 Interactive charts (spending by category, monthly trends, net worth evolution)
+- 💳 Transaction CRUD with filtering, sorting, and pagination
+- 🎯 Budget goal tracking with progress indicators
+- 📈 Net worth timeline and savings rate calculator
+- 🔐 JWT authentication with refresh tokens
+- 🧪 Unit + integration tests with 80%+ coverage
+- 📝 Auto-generated API docs with Swagger UI
+
+## 🛠️ Tech Stack
+
+| Layer      | Technology                        |
+|------------|-----------------------------------|
+| Backend    | Node.js, Express, SQLite (better-sqlite3) |
+| Auth       | JWT (access + refresh tokens)     |
+| Frontend   | Vanilla JS, Chart.js, CSS Grid    |
+| Testing    | Jest, Supertest                   |
+| Docs       | Swagger / OpenAPI 3.0             |
+
+## 🚀 Quick Start
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/finance-dashboard.git
+# Clone the repo
+git clone https://github.com/your-username/finance-dashboard.git
 cd finance-dashboard
 
-# Instalar dependencias
+# Install dependencies
 cd backend && npm install
 cd ../frontend && npm install
 
-# Sembrar la base de datos con datos de ejemplo
+# Seed the database with sample data
 cd ../backend && npm run seed
 
-# Iniciar el backend (puerto 3000)
+# Start the backend (port 3000)
 npm run dev
-En otra terminal, servir el frontend:
 
-bash
+# In another terminal, serve the frontend
 cd ../frontend && npm run dev
-Abre http://localhost:5173 en tu navegador.
+```
 
-📁 Estructura del proyecto
-text
+Open `http://localhost:5173` in your browser.
+
+## 📁 Project Structure
+
+```
 finance-dashboard/
 ├── backend/
 │   ├── src/
-│   │   ├── controllers/     # Manejadores de peticiones (capa delgada)
-│   │   ├── models/          # Lógica de negocio + consultas a BD
-│   │   ├── routes/          # Enrutadores de Express
-│   │   ├── middleware/      # Autenticación, manejo de errores, validación
-│   │   └── db/              # Esquema, migraciones, datos de prueba
-│   └── tests/               # Suites de pruebas Jest
+│   │   ├── controllers/     # Request handlers (thin layer)
+│   │   ├── models/          # Business logic + DB queries
+│   │   ├── routes/          # Express routers
+│   │   ├── middleware/       # Auth, error handling, validation
+│   │   └── db/              # Schema, migrations, seed data
+│   └── tests/               # Jest test suites
 ├── frontend/
 │   └── src/
-│       ├── components/      # Componentes UI reutilizables
-│       ├── hooks/           # Hooks de gestión de estado
-│       ├── pages/           # Vistas a nivel de página
-│       └── utils/           # Cliente API, formateadores
+│       ├── components/      # Reusable UI components
+│       ├── hooks/           # State management hooks
+│       ├── pages/           # Page-level views
+│       └── utils/           # API client, formatters
 └── docs/
-    └── openapi.yaml         # Especificación de la API
+    └── openapi.yaml         # API specification
+```
 
-🔌 Endpoints de la API
-Método	Ruta	Descripción
-POST	/auth/register	Crear cuenta
-POST	/auth/login	Obtener tokens JWT
-GET	/transactions	Listar con filtros + paginación
-POST	/transactions	Crear transacción
-PUT	/transactions/:id	Actualizar transacción
-DELETE	/transactions/:id	Eliminar transacción
-GET	/analytics/summary	Resumen mensual
-GET	/analytics/by-category	Gastos por categoría
-GET	/analytics/net-worth	Línea de tiempo del patrimonio neto
-GET	/budgets	Obtener todos los presupuestos
-PUT	/budgets/:category	Actualizar objetivo de presupuesto
+## 🔌 API Endpoints
 
-🧪 Ejecutar pruebas
-bash
+| Method | Path                       | Description              |
+|--------|----------------------------|--------------------------|
+| POST   | `/auth/register`           | Create account           |
+| POST   | `/auth/login`              | Get JWT tokens           |
+| GET    | `/transactions`            | List with filters + pagination |
+| POST   | `/transactions`            | Create transaction       |
+| PUT    | `/transactions/:id`        | Update transaction       |
+| DELETE | `/transactions/:id`        | Delete transaction       |
+| GET    | `/analytics/summary`       | Monthly summary          |
+| GET    | `/analytics/by-category`   | Spending by category     |
+| GET    | `/analytics/net-worth`     | Net worth timeline       |
+| GET    | `/budgets`                 | Get all budgets          |
+| PUT    | `/budgets/:category`       | Update budget goal       |
+
+## 🧪 Running Tests
+
+```bash
 cd backend
-npm test              # Ejecutar todas las pruebas
-npm run test:coverage # Con informe de cobertura
+npm test              # Run all tests
+npm run test:coverage # With coverage report
+```
 
-📸 Capturas de pantalla
-Ver la carpeta /docs/screenshots/ para vistas previas de la interfaz.
+## 📸 Screenshots
 
-🤝 Contribuciones
-Las solicitudes de cambio son bienvenidas. Por favor, abre un issue primero para discutir cambios significativos.
+See `/docs/screenshots/` for UI previews.
 
-📄 Licencia
+## 🤝 Contributing
+
+Pull requests welcome. Please open an issue first to discuss significant changes.
+
+## 📄 License
+
 MIT
