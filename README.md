@@ -43,7 +43,8 @@ npm run dev
 cd ../frontend && npm run dev
 Abrir http://localhost:5173 en tu navegador.
 
-📁 Estructura del proyecto
+## 📁 Estructura del proyecto
+
 text
 finance-dashboard/
 ├── backend/
@@ -62,7 +63,9 @@ finance-dashboard/
 │       └── utils/           # Cliente API, formateadores
 └── docs/
     └── openapi.yaml         # Especificación de la API
-🔌 Endpoints de la API
+
+## 🔌 Endpoints de la API
+
 Método	Ruta	Descripción
 POST	/auth/register	Crear cuenta
 POST	/auth/login	Obtener tokens JWT
@@ -75,16 +78,18 @@ GET	/analytics/by-category	Gastos por categoría
 GET	/analytics/net-worth	Línea de tiempo del patrimonio neto
 GET	/budgets	Obtener todos los presupuestos
 PUT	/budgets/:category	Actualizar objetivo de presupuesto
-Ejecutar pruebas
+
+## Ejecutar pruebas
 bash
 cd backend
 npm test              # Ejecutar todas las pruebas
 npm run test:coverage # Con informe de cobertura
-Capturas de pantalla
+
+## Capturas de pantalla
 Ver la carpeta /docs/screenshots/ para vistas previas de la interfaz.
 
-Contribuciones
+## Contribuciones
 Las solicitudes de cambio son bienvenidas. Por favor, abre un issue primero para discutir cambios significativos.
 
-📄 Licencia
+## 📄 Licencia
 MIT
