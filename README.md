@@ -1,53 +1,50 @@
-# 💰 Finance Dashboard
+# 💰 Dashboard de Finanzas
 
-A full-stack personal finance tracking application built with **Node.js**, **SQLite**, and **vanilla JavaScript**. Features real-time charts, budget tracking, and transaction management with a clean REST API.
+Una aplicación full-stack para seguimiento de finanzas personales construida con Node.js, SQLite y JavaScript vanilla. Incluye gráficos en tiempo real, seguimiento de presupuestos y gestión de transacciones con una API REST limpia.
 
-## ✨ Features
+## ✨ Características
 
-- 📊 Interactive charts (spending by category, monthly trends, net worth evolution)
-- 💳 Transaction CRUD with filtering, sorting, and pagination
-- 🎯 Budget goal tracking with progress indicators
-- 📈 Net worth timeline and savings rate calculator
-- 🔐 JWT authentication with refresh tokens
-- 🧪 Unit + integration tests with 80%+ coverage
-- 📝 Auto-generated API docs with Swagger UI
+- 📊 Gráficos interactivos (gastos por categoría, tendencias mensuales, evolución del patrimonio neto)
+- 💳 CRUD de transacciones con filtrado, ordenamiento y paginación
+- 🎯 Seguimiento de objetivos de presupuesto con indicadores de progreso
+- 📈 Línea de tiempo del patrimonio neto y calculadora de tasa de ahorro
+- 🔐 Autenticación JWT con tokens de refresco
+- 🧪 Pruebas unitarias + de integración con cobertura superior al 80%
+- 📝 Documentación de API autogenerada con Swagger UI
 
 ## 🛠️ Tech Stack
 
-| Layer      | Technology                        |
-|------------|-----------------------------------|
-| Backend    | Node.js, Express, SQLite (better-sqlite3) |
-| Auth       | JWT (access + refresh tokens)     |
-| Frontend   | Vanilla JS, Chart.js, CSS Grid    |
-| Testing    | Jest, Supertest                   |
-| Docs       | Swagger / OpenAPI 3.0             |
+| Capa          | Tecnología                               |
+|---------------|------------------------------------------|
+| Backend       | Node.js, Express, SQLite (better-sqlite3) |
+| Autenticación | JWT (tokens de acceso + refresco)        |
+| Frontend      | JavaScript vanilla, Chart.js, CSS Grid   |
+| Pruebas       | Jest, Supertest                          |
+| Documentación | Swagger / OpenAPI 3.0                    |
 
-## 🚀 Quick Start
+## 🚀 Inicio rápido
 
 ```bash
-# Clone the repo
+# Clonar el repositorio
 git clone https://github.com/RondonaObesoAlexander/Dashboard-finanzas.git
 cd Dashboard-finanzas
 
-# Install dependencies
+# Instalar dependencias
 cd backend && npm install
 cd ../frontend && npm install
 
-# Seed the database with sample data
+# Sembrar la base de datos con datos de ejemplo
 cd ../backend && npm run seed
 
-# Start the backend (port 3000)
+# Iniciar el backend (puerto 3000)
 npm run dev
 
-# In another terminal, serve the frontend
+# En otra terminal, servir el frontend
 cd ../frontend && npm run dev
-```
+Abrir http://localhost:5173 en tu navegador.
 
-abrir `http://localhost:5173` en tu buscador.
-
-## 📁 Estructura del proyecto
-
-```
+📁 Estructura del proyecto
+text
 finance-dashboard/
 ├── backend/
 │   ├── src/
@@ -65,40 +62,29 @@ finance-dashboard/
 │       └── utils/           # Cliente API, formateadores
 └── docs/
     └── openapi.yaml         # Especificación de la API
-```
-
-## 🔌 API Endpoints
-
-| Method | Path                       | Description              |
-|--------|----------------------------|--------------------------|
-| POST   | `/auth/register`           | Create account           |
-| POST   | `/auth/login`              | Get JWT tokens           |
-| GET    | `/transactions`            | List with filters + pagination |
-| POST   | `/transactions`            | Create transaction       |
-| PUT    | `/transactions/:id`        | Update transaction       |
-| DELETE | `/transactions/:id`        | Delete transaction       |
-| GET    | `/analytics/summary`       | Monthly summary          |
-| GET    | `/analytics/by-category`   | Spending by category     |
-| GET    | `/analytics/net-worth`     | Net worth timeline       |
-| GET    | `/budgets`                 | Get all budgets          |
-| PUT    | `/budgets/:category`       | Update budget goal       |
-
-##  Running Tests
-
-```bash
+🔌 Endpoints de la API
+Método	Ruta	Descripción
+POST	/auth/register	Crear cuenta
+POST	/auth/login	Obtener tokens JWT
+GET	/transactions	Listar con filtros + paginación
+POST	/transactions	Crear transacción
+PUT	/transactions/:id	Actualizar transacción
+DELETE	/transactions/:id	Eliminar transacción
+GET	/analytics/summary	Resumen mensual
+GET	/analytics/by-category	Gastos por categoría
+GET	/analytics/net-worth	Línea de tiempo del patrimonio neto
+GET	/budgets	Obtener todos los presupuestos
+PUT	/budgets/:category	Actualizar objetivo de presupuesto
+Ejecutar pruebas
+bash
 cd backend
-npm test              # Run all tests
-npm run test:coverage # With coverage report
-```
+npm test              # Ejecutar todas las pruebas
+npm run test:coverage # Con informe de cobertura
+Capturas de pantalla
+Ver la carpeta /docs/screenshots/ para vistas previas de la interfaz.
 
-## Screenshots
+Contribuciones
+Las solicitudes de cambio son bienvenidas. Por favor, abre un issue primero para discutir cambios significativos.
 
-See `/docs/screenshots/` for UI previews.
-
-## Contributing
-
-Pull requests welcome. Please open an issue first to discuss significant changes.
-
-## 📄 License
-
+📄 Licencia
 MIT
