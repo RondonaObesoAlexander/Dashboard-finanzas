@@ -1,6 +1,6 @@
 # 💰 Dashboard de Finanzas
 
-Una aplicación full-stack para seguimiento de finanzas personales construida con Node.js, SQLite y JavaScript vanilla. Incluye gráficos en tiempo real, seguimiento de presupuestos y gestión de transacciones con una API REST limpia.
+Aplicación full-stack para seguimiento de finanzas personales construida con **Node.js**, **SQLite** y **JavaScript vanilla**. Incluye gráficos en tiempo real, seguimiento de presupuestos y gestión de transacciones con una API REST limpia.
 
 ## ✨ Características
 
@@ -14,20 +14,20 @@ Una aplicación full-stack para seguimiento de finanzas personales construida co
 
 ## 🛠️ Tech Stack
 
-| Capa          | Tecnología                               |
-|---------------|------------------------------------------|
-| Backend       | Node.js, Express, SQLite (better-sqlite3) |
+| Capa        | Tecnología                               |
+|-------------|------------------------------------------|
+| Backend     | Node.js, Express, SQLite (better-sqlite3) |
 | Autenticación | JWT (tokens de acceso + refresco)        |
-| Frontend      | JavaScript vanilla, Chart.js, CSS Grid   |
-| Pruebas       | Jest, Supertest                          |
-| Documentación | Swagger / OpenAPI 3.0                    |
+| Frontend    | JavaScript vanilla, Chart.js, CSS Grid   |
+| Pruebas     | Jest, Supertest                          |
+| Documentación | Swagger / OpenAPI 3.0                   |
 
 ## 🚀 Inicio rápido
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/RondonaObesoAlexander/Dashboard-finanzas.git
-cd Dashboard-finanzas
+git clone https://github.com/tu-usuario/finance-dashboard.git
+cd finance-dashboard
 
 # Instalar dependencias
 cd backend && npm install
@@ -41,10 +41,9 @@ npm run dev
 
 # En otra terminal, servir el frontend
 cd ../frontend && npm run dev
-Abrir http://localhost:5173 en tu navegador.
+Abre http://localhost:5173 en tu navegador.
 
-## 📁 Estructura del proyecto
-
+📁 Estructura del proyecto
 text
 finance-dashboard/
 ├── backend/
@@ -63,9 +62,7 @@ finance-dashboard/
 │       └── utils/           # Cliente API, formateadores
 └── docs/
     └── openapi.yaml         # Especificación de la API
-
-## 🔌 Endpoints de la API
-
+🔌 Endpoints de la API
 Método	Ruta	Descripción
 POST	/auth/register	Crear cuenta
 POST	/auth/login	Obtener tokens JWT
@@ -78,18 +75,16 @@ GET	/analytics/by-category	Gastos por categoría
 GET	/analytics/net-worth	Línea de tiempo del patrimonio neto
 GET	/budgets	Obtener todos los presupuestos
 PUT	/budgets/:category	Actualizar objetivo de presupuesto
-
-## Ejecutar pruebas
+🧪 Ejecutar pruebas
 bash
 cd backend
 npm test              # Ejecutar todas las pruebas
 npm run test:coverage # Con informe de cobertura
-
-## Capturas de pantalla
+📸 Capturas de pantalla
 Ver la carpeta /docs/screenshots/ para vistas previas de la interfaz.
 
-## Contribuciones
+🤝 Contribuciones
 Las solicitudes de cambio son bienvenidas. Por favor, abre un issue primero para discutir cambios significativos.
 
-## 📄 Licencia
+📄 Licencia
 MIT
