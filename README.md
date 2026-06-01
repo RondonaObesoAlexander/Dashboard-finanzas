@@ -48,7 +48,7 @@ Abre http://localhost:5173 en tu navegador.
 ## 📁 Estructura del proyecto
 
 ```
-finance-dashboard/
+Dashboard-finanzas/
 ├── backend/
 │   ├── src/
 │   │   ├── controllers/     # Manejadores de peticiones (capa delgada)
