@@ -1,0 +1,33 @@
+{
+  "name": "finance-dashboard-backend",
+  "version": "1.0.0",
+  "description": "REST API for the Finance Dashboard application",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "seed": "node src/db/seed.js",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --coverage --runInBand"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^9.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.0",
+    "yamljs": "^0.3.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["src/**/*.js", "!src/db/seed.js"]
+  }
+}
