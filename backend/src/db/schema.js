@@ -5,10 +5,6 @@ const DB_PATH = process.env.DB_PATH || path.join(__dirname, '../../data/finance.
 
 let db;
 
-/**
- * Returns the singleton database connection.
- * Creates tables on first call (idempotent via IF NOT EXISTS).
- */
 function getDb() {
   if (db) return db;
 
