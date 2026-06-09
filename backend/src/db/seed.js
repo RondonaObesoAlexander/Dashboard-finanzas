@@ -1,7 +1,5 @@
 /**
- * db/seed.js
- * Populates the database with realistic sample data for development/demo.
-const bcrypt = require('bcryptjs');
+ * db/seed.jsconst bcrypt = require('bcryptjs');
 const path = require('path');
 const fs = require('fs');
 
