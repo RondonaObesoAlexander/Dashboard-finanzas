@@ -1,5 +1,4 @@
-/**
- * db/seed.jsconst bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const path = require('path');
 const fs = require('fs');
 
